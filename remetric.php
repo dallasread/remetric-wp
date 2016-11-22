@@ -43,7 +43,7 @@ class Remetric {
     add_action( 'wp_enqueue_scripts',          array( $this, 'wp_enqueue_scripts') );
     add_action( 'wp_footer',                   array( $this, 'wp_footer' ) );
 
-    add_action( 'wp_ajax_set_publishable_key', array( $this, 'set_publishable_key' ) );
+    add_action( 'wp_ajax_remetric_save_keys', array( $this, 'save_keys' ) );
   }
 
   public static function admin_init() {
@@ -51,11 +51,6 @@ class Remetric {
   }
 
   public static function wp_footer() {
-    global $remetric_publishable_key;
-
-    $remetric_publishable_key = get_option('remetric_publishable_key');
-
-    //
   }
 
   public static function menu_page() {
@@ -63,28 +58,32 @@ class Remetric {
   }
 
   public static function admin_page() {
-    global $remetric_publishable_key;
+    $remetric_publishable_key = get_option( 'remetric_publishable_key' );
+    $remetric_access_token = get_option( 'remetric_access_token' );
 
-    $remetric_publishable_key = get_option('remetric_publishable_key');
     $remetricAdminUrl = self::debug ? 'http://localhost:8080/remetric-admin.js' : 'http://www.remetric.com/remetric-admin.js';
     $remetricApiUrl = self::debug ? 'http://api.lvh.me:3000' : 'http://api.remetric.com';
-
-    if (isset($_REQUEST['remetric_publishable_key'])) {
-        Remetric::set_publishable_key( esc_attr($_REQUEST['remetric_publishable_key']) );
-    }
 
     require_once 'page.php';
   }
 
-  public static function set_publishable_key($publishable_key) {
-    global $remetric_publishable_key;
-    $remetric_publishable_key = isset($_REQUEST['remetric_publishable_key']) ? esc_attr($_REQUEST['remetric_publishable_key']) : $publishable_key;
-    update_option('remetric_publishable_key', $remetric_publishable_key);
-    die($remetric_publishable_key);
+  public static function save_keys() {
+    if (isset($_REQUEST['remetric_publishable_key'])) {
+        $remetric_publishable_key = esc_attr($_REQUEST['remetric_publishable_key']);
+        update_option( 'remetric_publishable_key', $remetric_publishable_key );
+    }
+
+    if (isset($_REQUEST['remetric_access_token'])) {
+        $remetric_access_token = esc_attr($_REQUEST['remetric_access_token']);
+        update_option( 'remetric_access_token', $remetric_access_token );
+    }
+
+    die();
   }
 }
 
-//delete_option('remetric_publishable_key');
+// delete_option('remetric_access_token');
+// delete_option('remetric_publishable_key');
 Remetric::init();
 
 ?>
