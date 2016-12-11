@@ -40,7 +40,6 @@ class Remetric {
     add_action( 'admin_init',                  array( $this, 'admin_init' ) );
     add_action( 'admin_menu',                  array( $this, 'menu_page' ) );
 
-    add_action( 'wp_enqueue_scripts',          array( $this, 'wp_enqueue_scripts') );
     add_action( 'wp_footer',                   array( $this, 'wp_footer' ) );
 
     add_action( 'wp_ajax_remetric_save_keys', array( $this, 'save_keys' ) );
@@ -51,6 +50,12 @@ class Remetric {
   }
 
   public static function wp_footer() {
+    $remetric_publishable_key = get_option( 'remetric_publishable_key' );
+    $remetric_api_url = self::debug ? 'http://api.lvh.me:3000' : 'http://api.remetric.com';
+    $marketing_url = self::debug ? 'http://localhost:9090/marketing.js' : 'http://www.remetric.com/marketing.js';
+    $marketing_publishable_key = self::debug ? $remetric_publishable_key : 'remetric';
+
+    require_once 'marketing.php';
   }
 
   public static function menu_page() {
@@ -61,8 +66,10 @@ class Remetric {
     $remetric_publishable_key = get_option( 'remetric_publishable_key' );
     $remetric_access_token = get_option( 'remetric_access_token' );
 
-    $remetricAdminUrl = self::debug ? 'http://localhost:8080/remetric-admin.js' : 'http://www.remetric.com/remetric-admin.js';
-    $remetricApiUrl = self::debug ? 'http://api.lvh.me:3000' : 'http://api.remetric.com';
+    $remetric_admin_url = self::debug ? 'http://localhost:8080/remetric-admin.js' : 'http://www.remetric.com/remetric-admin.js';
+    $remetric_api_url = self::debug ? 'http://api.lvh.me:3000' : 'http://api.remetric.com';
+    $marketing_url = self::debug ? 'http://localhost:9090/marketing.js' : 'http://www.remetric.com/marketing.js';
+    $marketing_publishable_key = self::debug ? $remetric_publishable_key : 'remetric';
 
     require_once 'page.php';
   }
