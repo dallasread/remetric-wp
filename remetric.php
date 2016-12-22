@@ -65,11 +65,17 @@ class Remetric {
   public static function admin_page() {
     $remetric_publishable_key = get_option( 'remetric_publishable_key' );
     $remetric_access_token = get_option( 'remetric_access_token' );
+    $marketing_publishable_key = 'remetric';
 
-    $remetric_admin_url = self::debug ? 'http://localhost:8080/remetric-admin.js' : 'http://www.remetric.com/remetric-admin.js';
-    $remetric_api_url = self::debug ? 'http://api.lvh.me:3000' : 'http://api.remetric.com';
-    $marketing_url = self::debug ? 'http://localhost:9090/marketing.js' : 'http://www.remetric.com/marketing.js';
-    $marketing_publishable_key = self::debug ? $remetric_publishable_key : 'remetric';
+    if (self::debug) {
+      $remetric_admin_url = 'http://localhost:8080/remetric-admin.js';
+      $remetric_api_url = 'http://api.lvh.me:3000';
+      $marketing_url = 'http://localhost:9090/marketing.js';
+    } else {
+      $remetric_admin_url = 'http://www.remetric.com/remetric-admin.js';
+      $remetric_api_url = 'http://api.remetric.com';
+      $marketing_url = 'http://www.remetric.com/marketing.js';
+    }
 
     require_once 'page.php';
   }

@@ -26,3 +26,5 @@
         i.parentNode.insertBefore(n, i);
     })('<?php echo $remetric_publishable_key; ?>', '<?php echo $remetric_access_token; ?>');
 </script>
+
+<?php require_once 'marketing.php'; ?>
