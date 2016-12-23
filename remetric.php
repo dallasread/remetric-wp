@@ -20,14 +20,14 @@ Copyright (c) 2014-2016 Dallas Read.
 
 */
 
-ini_set("display_errors",1);
-ini_set("display_startup_errors",1);
-error_reporting(-1);
+// ini_set("display_errors",1);
+// ini_set("display_startup_errors",1);
+// error_reporting(-1);
 
 class Remetric {
   public static $remetric_instance;
   const version = '1.0.0';
-  const debug = true;
+  const debug = false;
 
   public static function init() {
     if ( is_null( self::$remetric_instance ) ) { self::$remetric_instance = new Remetric(); }
@@ -50,10 +50,15 @@ class Remetric {
   }
 
   public static function wp_footer() {
-    $remetric_publishable_key = get_option( 'remetric_publishable_key' );
-    $remetric_api_url = self::debug ? 'http://api.lvh.me:3000' : 'http://api.remetric.com';
-    $marketing_url = self::debug ? 'http://localhost:9090/marketing.js' : 'http://www.remetric.com/marketing.js';
-    $marketing_publishable_key = self::debug ? $remetric_publishable_key : 'remetric';
+    $marketing_publishable_key = get_option( 'remetric_publishable_key' );
+
+    if (self::debug) {
+      $remetric_api_url = 'http://api.lvh.me:3000';
+      $marketing_url = 'http://localhost:9090/marketing.js';
+    } else {
+      $remetric_api_url = 'http://api.remetric.com';
+      $marketing_url = 'http://cdn.remetric.com/marketing.js';
+    }
 
     require_once 'marketing.php';
   }
@@ -72,9 +77,9 @@ class Remetric {
       $remetric_api_url = 'http://api.lvh.me:3000';
       $marketing_url = 'http://localhost:9090/marketing.js';
     } else {
-      $remetric_admin_url = 'http://www.remetric.com/remetric-admin.js';
+      $remetric_admin_url = 'http://cdn.remetric.com/remetric-admin.js';
       $remetric_api_url = 'http://api.remetric.com';
-      $marketing_url = 'http://www.remetric.com/marketing.js';
+      $marketing_url = 'http://cdn.remetric.com/marketing.js';
     }
 
     require_once 'page.php';
