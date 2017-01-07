@@ -27,7 +27,7 @@ Copyright (c) 2014-2016 Dallas Read.
 class Remetric {
   public static $remetric_instance;
   const version = '1.0.0';
-  const debug = false;
+  const debug = true;
 
   public static function init() {
     if ( is_null( self::$remetric_instance ) ) { self::$remetric_instance = new Remetric(); }
@@ -53,11 +53,11 @@ class Remetric {
     $marketing_publishable_key = get_option( 'remetric_publishable_key' );
 
     if (self::debug) {
-      $remetric_api_url = 'http://api.lvh.me:3000';
       $marketing_url = 'http://localhost:9090/marketing.js';
+      $marketing_api_url = 'http://' . $marketing_publishable_key . '.lvh.me:3000/api';
     } else {
-      $remetric_api_url = 'http://api.remetric.com';
       $marketing_url = 'http://cdn.remetric.com/marketing.js';
+      $marketing_api_url = 'http://' . $marketing_publishable_key . '.unstories.com/api';
     }
 
     require_once 'marketing.php';
@@ -76,10 +76,12 @@ class Remetric {
       $remetric_admin_url = 'http://localhost:8080/remetric-admin.js';
       $remetric_api_url = 'http://api.lvh.me:3000';
       $marketing_url = 'http://localhost:9090/marketing.js';
+      $marketing_api_url = 'http://' . $marketing_publishable_key . '.lvh.me:3000/api';
     } else {
       $remetric_admin_url = 'http://cdn.remetric.com/remetric-admin.js';
       $remetric_api_url = 'http://api.remetric.com';
       $marketing_url = 'http://cdn.remetric.com/marketing.js';
+      $marketing_api_url = 'http://' . $marketing_publishable_key . '.unstories.com/api';
     }
 
     require_once 'page.php';
@@ -100,6 +102,8 @@ class Remetric {
   }
 }
 
+// update_option('remetric_access_token', '2fb64a6b52faa06545305615f4b91580');
+// update_option('remetric_publishable_key', 'remetric');
 // delete_option('remetric_access_token');
 // delete_option('remetric_publishable_key');
 Remetric::init();

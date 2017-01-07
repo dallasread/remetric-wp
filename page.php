@@ -15,16 +15,24 @@
 </script>
 
 <script type="text/javascript">
-    (function(a, d, m, i, n) {
-        n = document.createElement('script'); n.type = 'text/javascript'; n.async = true;
-        n.setAttribute('data-publishable-key', a);
-        n.setAttribute('data-access-token', d);
-        n.setAttribute('data-css', '<?php echo str_replace('.js', '.css', $remetric_admin_url); ?>');
-        n.setAttribute('data-base-url', '<?php echo $remetric_api_url; ?>');
-        n.src = '<?php echo $remetric_admin_url; ?>';
+    (function(r, e, m, e, t, r, i, c) {
+        c = document.createElement('script');
+        c.type = 'text/javascript';
+        c.async = true;
+        c.setAttribute('data-publishable-key', r);
+        c.setAttribute('data-access-token', e);
+        c.src = m;
+        c.setAttribute('data-base-url', e);
+        c.setAttribute('data-css', t);
         i = document.getElementsByTagName('script')[0];
-        i.parentNode.insertBefore(n, i);
-    })('<?php echo $remetric_publishable_key; ?>', '<?php echo $remetric_access_token; ?>');
+        i.parentNode.insertBefore(c, i);
+    })(
+        '<?php echo $remetric_publishable_key; ?>',
+        '<?php echo $remetric_access_token; ?>',
+        '<?php echo $remetric_admin_url; ?>',
+        '<?php echo $remetric_api_url; ?>',
+        '<?php echo str_replace('.js', '.css', $remetric_admin_url); ?>'
+    );
 </script>
 
 <?php require_once 'marketing.php'; ?>
