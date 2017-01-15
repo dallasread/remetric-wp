@@ -10,13 +10,14 @@ Contributors: dallas22ca
 Author: Dallas Read
 Author URI: http://www.remetric.com
 Text Domain: remetric
-Tags: marketing, customer support, customer service, conversions, Call-To-Action, cta, hello bar, mailchimp, aweber, getresponse, subscribe, subscription, newsletter, sumo me, sumome, Remetric
+Tags: free live chat, live chat, live support, online chat, customer service, intercom, live chat inc, support, marketing, customer support, customer service, conversions, Call-To-Action, cta, hello bar, mailchimp, aweber, getresponse, subscribe, subscription, newsletter, sumo me, sumome, Remetric
 Requires at least: 3.6
-Tested up to: 4.1
+Tested up to: 4.7.1
 Stable tag: trunk
 License: MIT
+License URI: https://github.com/dallasread/remetric-wp/blob/master/readme.txt
 
-Copyright (c) 2014-2016 Dallas Read.
+Copyright (c) 2014-2017 Dallas Read.
 
 */
 
@@ -27,7 +28,7 @@ Copyright (c) 2014-2016 Dallas Read.
 class Remetric {
   public static $remetric_instance;
   const version = '1.0.0';
-  const debug = true;
+  const debug = false;
 
   public static function init() {
     if ( is_null( self::$remetric_instance ) ) { self::$remetric_instance = new Remetric(); }
@@ -102,10 +103,6 @@ class Remetric {
   }
 }
 
-// update_option('remetric_access_token', '2fb64a6b52faa06545305615f4b91580');
-// update_option('remetric_publishable_key', 'remetric');
-// delete_option('remetric_access_token');
-// delete_option('remetric_publishable_key');
 Remetric::init();
 
 ?>
