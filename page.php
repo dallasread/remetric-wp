@@ -15,17 +15,17 @@
 </script>
 
 <script type="text/javascript">
-    (function(r, e, m, e, t, r, i, c) {
-        c = document.createElement('script');
-        c.type = 'text/javascript';
-        c.async = true;
-        c.setAttribute('data-publishable-key', r);
-        c.setAttribute('data-access-token', e);
-        c.src = m;
-        c.setAttribute('data-base-url', e);
-        c.setAttribute('data-css', t);
-        i = document.getElementsByTagName('script')[0];
-        i.parentNode.insertBefore(c, i);
+    (function(m, a, r, k, e, t, i, n, g) {
+        g = document.createElement('script');
+        g.type = 'text/javascript';
+        g.async = true;
+        g.setAttribute('data-publishable-key', m);
+        g.setAttribute('data-access-token', a);
+        g.src = r;
+        g.setAttribute('data-base-url', k);
+        g.setAttribute('data-css', e);
+        n = document.getElementsByTagName('script')[0];
+        n.parentNode.insertBefore(g, n);
     })(
         '<?php echo $remetric_publishable_key; ?>',
         '<?php echo $remetric_access_token; ?>',
@@ -35,4 +35,4 @@
     );
 </script>
 
-<?php require_once 'marketing.php'; ?>
+<!-- <?php require_once 'marketing.php'; ?> -->

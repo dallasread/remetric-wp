@@ -50,7 +50,7 @@ class Remetric {
   }
 
   public static function wp_footer() {
-    $marketing_publishable_key = get_option( 'remetric_publishable_key' );
+    $marketing_publishable_key = get_option( 'remetric_publishable_key', '' );
 
     if (self::debug) {
       $marketing_url = 'http://localhost:9090/marketing.js';
@@ -68,8 +68,8 @@ class Remetric {
   }
 
   public static function admin_page() {
-    $remetric_publishable_key = get_option( 'remetric_publishable_key' );
-    $remetric_access_token = get_option( 'remetric_access_token' );
+    $remetric_publishable_key = get_option( 'remetric_publishable_key', '' );
+    $remetric_access_token = get_option( 'remetric_access_token', '' );
     $marketing_publishable_key = 'remetric';
 
     if (self::debug) {
