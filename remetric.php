@@ -4,7 +4,7 @@
 
 Plugin Name: Remetric
 Plugin URI: http://www.remetric.com
-Description: Remetric is a suite of high-converting tools that help you to engage your visitors, personalize customer connections, and boost your profits.
+Description: Live Chat with your visitors from your phone via SMS with Remetric Live Chat.
 Version: 1.0.0
 Contributors: dallas22ca
 Author: Dallas Read

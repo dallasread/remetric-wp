@@ -1,116 +1,50 @@
-=== Plugin Name ===
+=== Remetric Live Chat ===
 Contributors: dallas22ca
 Donate link: http://www.remetric.com/
-Tags: free live chat, live chat, live support, online chat, customer service, intercom, live chat inc, support
+Tags: free live chat, live chat, live support, online chat, customer service, intercom, live chat inc, support, marketing, customer support, customer service, conversions, Call-To-Action, cta, hello bar, mailchimp, aweber, getresponse, subscribe, subscription, newsletter, sumo me, sumome, Remetric
 Requires at least: 3.6
 Tested up to: 4.7.1
-Stable tag: 4.7.1
+Stable tag: trunk
 License: MIT
-License URI: https://github.com/dallasread/remetric-wp/blob/master/readme.txt
+License URI: https://github.com/dallasread/remetric-wp/blob/master/LICENSE
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+Live Chat with your visitors from your phone via SMS with Remetric Live Chat.
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+**Remetric puts the power of connecting with visitors in the palm of your hand. You get:**
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+* Extremely customizable live chat for your visitors to interact with.
+* **Chat from your phone:** Perfect for the small business owner. Through SMS (text messages), you'll be able to stay in touch with the visitors on your website.
+* **Triggers:** Start conversations based on your specified criteria. For example, if they've been on your checkout page too long, ask them "Do you need help checking out?"
+* **Multiple Agents:** Put the power of multiple customer service reps to work for you!
 
-A few notes about the sections above:
+Visit the Upgrade page in the plugin to receive a **LIFETIME 50% OFF**!
 
-*   "Contributors" is a comma separated list of wordpress.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
-
-    Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
-
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-e.g.
-
-1. Upload the plugin files to the `/wp-content/plugins/plugin-name` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
-1. Use the Settings->Plugin Name screen to configure the plugin
-1. (Make your instructions match the desired user flow for activating and installing your plugin. Include any steps that might be needed for explanatory purposes)
-
+1. Upload the plugin files to the `/wp-content/plugins/remetric` directory, or install the plugin through the WordPress plugins screen directly.
+1. Activate the plugin through the 'Plugins' screen in WordPress.
+1. Find the Remetric tab in WP Admin area.
+1. Visit the "Live Chat Setup" page to set up your agents, availability, & SMS.
+1. Visit the "Convos" page to chat with your online visitors.
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
-
-An answer to that question.
-
-= What about foo bar? =
-
-Answer to foo bar dilemma.
+Coming soon!
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. Set up your live chat to match your brand.
+2. Your live chat box is goes ONLINE when you are in the Convos App. Additionally, you can set your SMS availability. If you're not online, we will collect your leads and send you their information. All times are displayed according to your current time zone.
+3. Canned messages are a great way to respond with quick, well-informed answers. If you have a canned message with a shortcode of "hours", simply respond to a chat with "#hours" and we'll fill in the corresponding message - even through text message.
+4. Just like in brick-and-mortar storefront, you're going to get the most out of your customers if you are pro-actively approaching them. Triggers allows you to set greetings and messages targeted at specific scenarios.
+5. Add other chat agents so that they can lighten your load. On the Availability page, you can set who is available when and how.
+6. The Convos app is where you can chat with your all of your visitors.
+7. A clean, simple interface ensures you'll find your live chat a breeze (but you'll probably just chat through your phone anyway)!
 
 == Changelog ==
 
 = 1.0 =
-* A change since the previous version.
-* Another change.
-
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
-
-== Upgrade Notice ==
-
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
-
-== A brief Markdown Example ==
-
-Ordered list:
-
-1. Some feature
-1. Another feature
-1. Something else about the plugin
-
-Unordered list:
-
-* something
-* something else
-* third thing
-
-Here's a link to [WordPress](http://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax].
-Titles are optional, naturally.
-
-[markdown syntax]: http://daringfireball.net/projects/markdown/syntax
-            "Markdown is what the parser uses to process much of the readme file"
-
-Markdown uses email style notation for blockquotes and I've been told:
-> Asterisks for *emphasis*. Double it up  for **strong**.
-
-`<?php code(); // goes in backticks ?>`
+* Initial release of the Remetric plugin.
