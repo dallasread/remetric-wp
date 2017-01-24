@@ -12,7 +12,7 @@ ignored = [
   "*tags*",
   "*tmp*",
   "*trunk*",
-  "latest.zip",
+  "remetric.zip",
   "zipper.rb"
 ].map{ |i| "-x '../remetric/#{i}'" }.join(" ")
 
@@ -27,8 +27,8 @@ File.open("remetric.php") { |file|
   File.open("remetric.php", "w") { |f| f << contents }
 }
 
-`rm latest.zip`
-`zip -r latest.zip ../remetric #{ignored}`
+`rm -rf remetric.zip`
+`zip -r remetric.zip ../remetric #{ignored}`
 # `rm -rf trunk`
 # `rm -rf remetric`
 # `unzip remetric.zip`
