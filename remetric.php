@@ -89,12 +89,12 @@ class Remetric {
 
   public static function save_keys() {
     if (isset($_REQUEST['remetric_publishable_key'])) {
-        $remetric_publishable_key = esc_attr($_REQUEST['remetric_publishable_key']);
+        $remetric_publishable_key = sanitize_text_field($_REQUEST['remetric_publishable_key']);
         update_option( 'remetric_publishable_key', $remetric_publishable_key );
     }
 
     if (isset($_REQUEST['remetric_access_token'])) {
-        $remetric_access_token = esc_attr($_REQUEST['remetric_access_token']);
+        $remetric_access_token = sanitize_text_field($_REQUEST['remetric_access_token']);
         update_option( 'remetric_access_token', $remetric_access_token );
     }
 
