@@ -20,15 +20,14 @@ License URI: https://github.com/dallasread/remetric-wp/blob/master/readme.txt
 Copyright (c) 2014-2017 Dallas Read.
 
 */
-
-// ini_set("display_errors",1);
-// ini_set("display_startup_errors",1);
-// error_reporting(-1);
+ini_set("display_errors",1);
+ini_set("display_startup_errors",1);
+error_reporting(-1);
 
 class Remetric {
   public static $remetric_instance;
   const version = '1.0.0';
-  const debug = false;
+  const debug = true;
 
   public static function init() {
     if ( is_null( self::$remetric_instance ) ) { self::$remetric_instance = new Remetric(); }
