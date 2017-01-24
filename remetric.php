@@ -10,7 +10,7 @@ Contributors: dallas22ca
 Author: Dallas Read
 Author URI: http://www.remetric.com
 Text Domain: remetric
-Tags: free live chat, live chat, live support, online chat, customer service, intercom, live chat inc, support, marketing, customer support, customer service, conversions, Call-To-Action, cta, hello bar, mailchimp, aweber, getresponse, subscribe, subscription, newsletter, sumo me, sumome, Remetric
+Tags: live chat, live support, marketing, customer support, customer service
 Requires at least: 3.6
 Tested up to: 4.7.1
 Stable tag: trunk
@@ -101,6 +101,9 @@ class Remetric {
     die();
   }
 }
+
+// delete_option('remetric_access_token');
+// delete_option('remetric_publishable_key');
 
 Remetric::init();
 

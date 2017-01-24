@@ -1,7 +1,7 @@
 === Remetric Live Chat ===
 Contributors: dallas22ca
 Donate link: http://www.remetric.com/
-Tags: free live chat, live chat, live support, online chat, customer service, intercom, live chat inc, support, marketing, customer support, customer service, conversions, Call-To-Action, cta, hello bar, mailchimp, aweber, getresponse, subscribe, subscription, newsletter, sumo me, sumome, Remetric
+Tags: live chat, live support, marketing, customer support, customer service
 Requires at least: 3.6
 Tested up to: 4.7.1
 Stable tag: trunk
