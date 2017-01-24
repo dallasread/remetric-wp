@@ -21,6 +21,7 @@ Live Chat with your visitors from your phone via SMS with Remetric Live Chat.
 
 Visit the Upgrade page in the plugin to receive a **LIFETIME 50% OFF**!
 
+The WordPress Remetric plugin interacts with and uses Remetric.com to deliver files, share data between websites, ensure quick server response times, and real-time data.
 
 == Installation ==
 
