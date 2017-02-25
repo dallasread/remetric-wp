@@ -5,7 +5,7 @@
 Plugin Name: Remetric
 Plugin URI: http://www.remetric.com
 Description: Live Chat with your visitors from your phone via SMS with Remetric Live Chat.
-Version: 1.0.0
+Version: 1.0.1
 Contributors: dallas22ca
 Author: Dallas Read
 Author URI: http://www.remetric.com
@@ -26,7 +26,7 @@ error_reporting(-1);
 
 class Remetric {
   public static $remetric_instance;
-  const version = '1.0.0';
+  const version = '1.0.1';
   const debug = true;
 
   public static function init() {
@@ -53,10 +53,10 @@ class Remetric {
     $marketing_publishable_key = get_option( 'remetric_publishable_key', '' );
 
     if (self::debug) {
-      $marketing_url = 'http://localhost:9090/marketing.js';
+      $marketing_url = 'http://localhost:9090/remetric.js';
       $marketing_api_url = 'http://' . $marketing_publishable_key . '.lvh.me:3000/api';
     } else {
-      $marketing_url = 'http://cdn.remetric.com/marketing.js';
+      $marketing_url = 'http://cdn.remetric.com/remetric.js';
       $marketing_api_url = 'http://' . $marketing_publishable_key . '.unstories.com/api';
     }
 
@@ -75,12 +75,12 @@ class Remetric {
     if (self::debug) {
       $remetric_admin_url = 'http://localhost:8080/remetric-admin.js';
       $remetric_api_url = 'http://api.lvh.me:3000';
-      $marketing_url = 'http://localhost:9090/marketing.js';
+      $marketing_url = 'http://localhost:9090/remetric.js';
       $marketing_api_url = 'http://' . $marketing_publishable_key . '.lvh.me:3000/api';
     } else {
       $remetric_admin_url = 'http://cdn.remetric.com/remetric-admin.js';
       $remetric_api_url = 'http://api.remetric.com';
-      $marketing_url = 'http://cdn.remetric.com/marketing.js';
+      $marketing_url = 'http://cdn.remetric.com/remetric.js';
       $marketing_api_url = 'http://' . $marketing_publishable_key . '.unstories.com/api';
     }
 

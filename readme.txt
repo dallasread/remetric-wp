@@ -47,5 +47,8 @@ Coming soon!
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.1 =
+* A UI Revamp (using Bars).
+
+= 1.0.0 =
 * Initial release of the Remetric plugin.
