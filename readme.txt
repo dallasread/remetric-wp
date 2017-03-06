@@ -38,7 +38,7 @@ Coming soon!
 == Screenshots ==
 
 1. Set up your live chat to match your brand.
-2. Your live chat box is goes ONLINE when you are in the Convos App. Additionally, you can set your SMS availability. If you're not online, we will collect your leads and send you their information. All times are displayed according to your current time zone.
+2. You can set your SMS availability. If you're not online, we will collect your leads and send you their information. All times are displayed according to your current time zone.
 3. Canned messages are a great way to respond with quick, well-informed answers. If you have a canned message with a shortcode of "hours", simply respond to a chat with "#hours" and we'll fill in the corresponding message - even through text message.
 4. Just like in brick-and-mortar storefront, you're going to get the most out of your customers if you are pro-actively approaching them. Triggers allows you to set greetings and messages targeted at specific scenarios.
 5. Add other chat agents so that they can lighten your load. On the Availability page, you can set who is available when and how.
@@ -46,6 +46,10 @@ Coming soon!
 7. A clean, simple interface ensures you'll find your live chat a breeze (but you'll probably just chat through your phone anyway)!
 
 == Changelog ==
+
+= 1.0.2 =
+* Added help chat.
+* Fix license link.
 
 = 1.0.1 =
 * A UI Revamp (using Bars).

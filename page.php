@@ -35,4 +35,15 @@
     );
 </script>
 
-<!-- <?php require_once 'marketing.php'; ?> -->
+<script type="text/javascript">
+    (function(m, a, r, k, e, t, i, n, g) {
+        g = document.createElement('script'); g.type = 'text/javascript'; g.async = true;
+        g.setAttribute('data-remetric', m);
+        g.setAttribute('data-css', 'http://cdn.remetric.com/marketing.css');
+        g.setAttribute('data-base-url', 'http://remetric.unstories.com/api');
+        g.src = 'http://cdn.remetric.com/remetric.js';
+        n = document.getElementsByTagName('script')[0];
+        n.parentNode.insertBefore(g, n);
+    })('remetric');
+</script>
+

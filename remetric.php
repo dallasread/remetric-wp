@@ -5,7 +5,7 @@
 Plugin Name: Remetric
 Plugin URI: http://www.remetric.com
 Description: Live Chat with your visitors from your phone via SMS with Remetric Live Chat.
-Version: 1.0.1
+Version: 1.0.2
 Contributors: dallas22ca
 Author: Dallas Read
 Author URI: http://www.remetric.com
@@ -15,7 +15,7 @@ Requires at least: 3.6
 Tested up to: 4.7.1
 Stable tag: trunk
 License: MIT
-License URI: https://github.com/dallasread/remetric-wp/blob/master/readme.txt
+License URI: https://github.com/dallasread/remetric-wp/blob/master/LICENSE
 
 Copyright (c) 2014-2017 Dallas Read.
 
@@ -42,7 +42,7 @@ class Remetric {
 
     add_action( 'wp_footer',                   array( $this, 'wp_footer' ) );
 
-    add_action( 'wp_ajax_remetric_save_keys', array( $this, 'save_keys' ) );
+    add_action( 'wp_ajax_remetric_save_keys',  array( $this, 'save_keys' ) );
   }
 
   public static function admin_init() {
